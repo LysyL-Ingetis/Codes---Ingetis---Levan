@@ -1,3 +1,5 @@
+###---------VOIR LE COMPTE RENDU PRE 5 NOVEMBRE---------###
+
 	Recherche et installation d’Arduino :
 	•	Utilisation de apt search arduino et apt install arduino a entraîné des problèmes de réseau et une installation trop longue.
 	Redémarrage de la carte réseau :
@@ -12,3 +14,10 @@
 	•	Code écrit et compilé avec succès, mais le téléversement a échoué à cause d’un port non reconnu.
 	Problèmes d’installation des bibliothèques ESP :
 	•	Impossible d’installer les bibliothèques ESP sur Arduino sur le poste.
+	Installation de la bonne bibliothèque : 
+	•	Installation du paramètre de carte E8266. 
+
+Fin sur : code téléversé et compilé mais erreur de port, problème sur la carte ESP, mélé a l'architecture javascrit de l'environnement arduino. 
+
+objectifs pour la prochaines fois : réparer les erreurs, tester les fonctions digitalWrite et digitalRead
+
