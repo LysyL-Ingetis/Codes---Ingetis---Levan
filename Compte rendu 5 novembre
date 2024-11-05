@@ -1,17 +1,14 @@
-5 NOVEMBRE 2024
-## VOIR "compte rendu pre 5 novembre 2024"
-recherche des paquets arduino avec "apt search", installation avec "apt install arduino"
-
-installation trop longue = problèmes de réseaux // problémes de paquet
-
-utilisation de sudo systemctl restart networking pour redemarrer la carte réseau de la raspberry
-
-utilisation d'apt get update et apt get upgrade pour mettre  jours les paquets
-
-installation toujours trop longue
-
-connexion a un nouveau réseau pour tenter de résoudre les problème sde réseaux
-
-installation réussi d'arduino (genuino)
-
-ESP32 connection au poste
+	Recherche et installation d’Arduino :
+	•	Utilisation de apt search arduino et apt install arduino a entraîné des problèmes de réseau et une installation trop longue.
+	Redémarrage de la carte réseau :
+	•	Commande sudo systemctl restart networking pour résoudre les problèmes de connexion.
+	Mise à jour des paquets :
+	•	Exécution de apt get update et apt get upgrade, mais installation toujours lente.
+	Changement de réseau :
+	•	Connexion à un nouveau réseau, ce qui a permis l’installation réussie d’Arduino (Genuino).
+	Connexion de l’ESP32 :
+	•	Tentative de connexion de l’ESP32 au Raspberry Pi et installation des bibliothèques nécessaires.
+	Écriture de code C++ :
+	•	Code écrit et compilé avec succès, mais le téléversement a échoué à cause d’un port non reconnu.
+	Problèmes d’installation des bibliothèques ESP :
+	•	Impossible d’installer les bibliothèques ESP sur Arduino sur le poste.
