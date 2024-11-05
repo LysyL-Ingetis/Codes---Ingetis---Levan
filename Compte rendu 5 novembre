@@ -1,0 +1,13 @@
+5 NOVEMBRE 2024
+## VOIR "compte rendu pre 5 novembre 2024"
+recherche des paquets arduino avec "apt search", installation avec "apt install arduino"
+
+installation trop longue = problèmes de réseaux // problémes de paquet
+
+utilisation de sudo systemctl restart networking pour redemarrer la carte réseau de la raspberry
+
+utilisation d'apt get update et apt get upgrade pour mettre  jours les paquets
+
+installation toujours trop longue
+
+connexion a un nouveau réseau pour tenter de résoudre les problème sde réseaux
