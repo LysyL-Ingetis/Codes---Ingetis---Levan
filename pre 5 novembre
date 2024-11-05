@@ -1,0 +1,20 @@
+pré 5 NOVEMBRE 2024
+
+1.	Connexion SSH : Configuration pour accès distant.
+	2.	Gestion des utilisateurs :
+	•	Création d’utilisateurs, mais problème de permissions sudo.
+	•	Tentative infructueuse d’édition via sudo visudo.
+	•	Suppression des utilisateurs pour ne garder que l’utilisateur principal.
+	•	Ajout réussi de l’utilisateur pi comme sudoer via sudo visudo.
+	3.	Configuration IP statique :
+	•	Adresse IPv4 définie manuellement sur 172.31.0.1/12. (changement du réseau local)
+	4.	Transfert de fichiers avec SCP :
+	•	Envoi de fichiers C pour divers exercices (ex : somme, factorielle, Fibonacci, etc.) vers le Raspberry Pi.
+	•	Commande utilisée : scp *chemin du fichier* username@ip-raspberry:*chemin destination*.
+	5.	Compilation et exécution :
+	•	Utilisation de gcc pour compiler et exécuter les programmes C avec succès.
+  • gcc -c / gcc -o
+
+Objectifs du 5 novembre :
+
+	•	Installer Arduino ESP32 ou 8266 pour de futurs projets.
