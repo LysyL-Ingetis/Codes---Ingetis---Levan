@@ -1,0 +1,23 @@
+Compte Rendu : Configuration d’une Carte Raspberry Pi (Suite)
+
+10 décembre 2024
+	•	ESP8266 sur Arduino :
+	•	Code fourni par le professeur fonctionnait partiellement.
+	•	Résolution du problème en mettant à jour les variables ssid et password avec les informations du réseau de l’école.
+	•	Connexion au Wi-Fi :
+	•	ESP8266 connecté avec succès.
+	•	Configuration du port série COM sur Windows avec un baud rate de 115200.
+	•	Adresse IP :
+	•	Attribuée dynamiquement : 172.16.0.127.
+	•	Problèmes restants :
+	•	Les lignes 12, 13 et 14 du code n’exécutent pas les print.
+	•	Causes possibles : problème de multitâche de l’ESP, communication série défectueuse, ou alimentation insuffisante (3.3V au lieu des 5V nécessaires).
+
+Compte Rendu : Configuration d’une Carte Raspberry Pi (Suite)
+
+10 décembre 2024 (matin)
+	•	Transfert de fichiers C :
+	•	Codes en C demandés par le professeur envoyés sur la Raspberry Pi via SCP.
+	•	Compilation et exécution :
+	•	Les codes ont été compilés avec GCC via le terminal en SSH, et les exécutables ont été créés avec succès.
+
