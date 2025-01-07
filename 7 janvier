@@ -1,13 +1,28 @@
-compte rendu 7 janvier 
+Compte Rendu : Configuration d’une Carte Raspberry Pi (Suite)
 
-ré installation de pi os : ""entrainement"" pour préparer l'E5 
+7 janvier 2025
+	•	Réinstallation de Pi OS :
+	  •	Installation sur carte SD et mise sous tension de la Raspberry Pi.
+	  •	Branchement à un écran via VGA/adaptateur HDMI.
+	  •	Configuration initiale avec Raspberry Pi ID, connexion au Wi-Fi, choix de l’heure, mot de passe et utilisateur.
+	•	Configuration réseau :
+	  •	Utilisation de raspi-config pour :
+	  •	Modifier le mot de passe et le nom d’hôte.
+	  •	Et configuration une IP statique (172.16.0.90, masque sur 12 bits, passerelle).
+	•	Tests et mise à jour :
+	  •	Exécution des commandes :
+	    •	Réseau : traceroute, ping, ifconfig.
+	    •	Système : sudo apt update, sudo apt upgrade.
+	    •	Installation de SSH pour les connexions externes.
+	•	Mise en place de VNC :
+	  •	Recherche des paquets avec apt-cache search.
+	  •	Installation de tiger-vnc-standalone-server et tiger-vnc.
+	•	Installation d’Apache :
+	  •	Installation via apt install apache2.
+	  •	Démarrage et activation avec systemctl start et systemctl enable.
+	  •	Modification du fichier index.html dans /var/www/html/, ajout d’un fichier CSS et JS.
+	•	Installation de Squid :
+	  •	Installation via apt install squid.
+	  •	Activation et démarrage avec systemctl start et systemctl enable.
 
-installationde piOS5 sur une carte sd, mise sous tension de la raspberry et brancher en vga/adaptateur hdmi a un écran, connection via raspberry pi ID choix d'un wifi, d'une heure, mdp et utilisateur pour le setup de l'os 
-
-raspi config pour modifier le mdp nom d'hote, modification de l'ip dans les paramêtres : 172.21.0.16 masque sur 3 octets, passerelle : 
-
-test des commandes tracreroute ping et ifconfig
-
-ainsi que sudo apt update et upgrade puis sudo apt install ssh et s pour permettre les connections externes en ssh 
-
-sudo apt-cache search pour trouver les différents paquet vnc, installation du paquet "tiger-vnc-standalone-server" ainsi que le paquet tiger vnc  pour permettre connection a l'aide de vnc sur une autre machine,  et pour faciliter la mis en place d'un server web
+pour plus tard : tester différents ports et se connecter au site web, mettre en place un active directory server.
