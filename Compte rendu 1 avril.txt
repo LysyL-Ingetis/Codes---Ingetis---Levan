@@ -1,18 +1,32 @@
-Compte rendu 01/04/2025:
+Compte Rendu : Problèmes d’Installation et de Configuration de Mosquitto
 
-1. Mise en place de l'ip statique du raspberry
+01 avril 2025
+	1.	Configuration initiale du Raspberry Pi
+	•	Mise en place d’une IP statique.
+	•	Mise à jour du système avec sudo apt update && sudo apt upgrade.
+	2.	Installation et vérification de Mosquitto
+	•	Installation avec sudo apt install mosquitto.
+	•	Vérification du statut : systemctl status mosquitto.
+	3.	Configuration pour un accès en ligne
+	•	Modification du fichier /etc/mosquitto/mosquitto.conf en ajoutant :
 
-2. Update et upgrade du systeme
+allow_anonymous true  
+listener 1883  
 
-3. Installation mosquitto: sudo apt install mosquitto
 
-4. Vérification de l'installation de mosquitto: systemctl status mosquitto
+	•	Problème rencontré : Mosquitto démarre uniquement en mode local.
+	•	Logs indiquant une erreur sur le port 1883 (Address already in use).
 
-5. Configuration de mosquitto pour mettre en place un accès en ligne: sudo nano /etc/mosquitto/mosquitto.Conf
+	4.	Tentatives de correction
+	•	Vérification des processus avec :
 
-6. Ajouter: 
+ps aux | grep mosquitto  
+sudo ss -tulnp | grep mosquitto  
 
-Allow_anonymous: true
-Listener 1883
 
-afin de mettre en place un accès en ligne
+	•	Arrêt des processus avec killall mosquitto puis redémarrage → Échec.
+	•	Vérification du port en écoute (0.0.0.0:1883 → actif et écouté par Mosquitto).
+
+	5.	Conclusion
+	•	Le firewall du réseau bloque Mosquitto.
+	•	La carte SD a été modifiée et réinitialisée à notre insu, nécessitant une nouvelle configuration.
