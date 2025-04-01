@@ -1,0 +1,18 @@
+Compte rendu 01/04/2025:
+
+1. Mise en place de l'ip statique du raspberry
+
+2. Update et upgrade du systeme
+
+3. Installation mosquitto: sudo apt install mosquitto
+
+4. Vérification de l'installation de mosquitto: systemctl status mosquitto
+
+5. Configuration de mosquitto pour mettre en place un accès en ligne: sudo nano /etc/mosquitto/mosquitto.Conf
+
+6. Ajouter: 
+
+Allow_anonymous: true
+Listener 1883
+
+afin de mettre en place un accès en ligne
