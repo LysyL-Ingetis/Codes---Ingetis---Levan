@@ -1,0 +1,12 @@
+Voici un compte rendu de la mise en place de différents serveurs sous Linux :
+
+Commande utile sous Linux :
+- sudo apt search "nom du paquet" (permet de rechercher dans la liste des paquets le nom exact du paquet que nous voulons installer)
+- man "nom du paquet" nous permet de visualiser toutes les commandes liées au paquet ciblé
+- sudo shutdown -h now (permet d'éteindre immédiatement la machine)
+
+- Serveur Apache :
+
+1. Mettre à jour les paquets (sudo apt update && sudo apt upgrade)
+2. Installer le service Apache sur notre appareil (sudo apt install apache2 -y)
+3. Installer les modules php
