@@ -1,0 +1,10 @@
+Compte rendu afin d'installer SSH sous linux :
+
+SSH:
+1. installer ssh (sudo apt install openssh-server)
+2. sudo systemctl enable ssh
+3. sudo systemctl start ssh
+4. sudo systemctl status ssh
+5. ip a
+
+Grâce à l'installation de SSH, nous pouvons nous connecter à distance  à notre machine ou bien lui envoyer des documets depuis une autre machine.
