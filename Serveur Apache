@@ -1,21 +1,37 @@
-Voici un compte rendu de la mise en place de différents serveurs sous Linux :
+##Commande utile sous Linux :
 
-Commande utile sous Linux :
-- sudo apt search "nom du paquet" (permet de rechercher dans la liste des paquets le nom exact du paquet que nous voulons installer)
-- man "nom du paquet" nous permet de visualiser toutes les commandes liées au paquet ciblé
-- sudo shutdown -h now (permet d'éteindre immédiatement la machine)
+sudo apt search "nom du paquet" (permet de rechercher dans la liste des paquets le nom exact du paquet que nous voulons installer)
 
-- Serveur Apache :
+man "nom du paquet" nous permet de visualiser toutes les commandes liées au paquet ciblé
 
-1. Mettre à jour les paquets (sudo apt update && sudo apt upgrade)
-2. Installer le service Apache sur notre appareil (sudo apt install apache2 -y)
-3. Installer les modules php
-4. Configurer le serveur apache (sudo systemctl enable apache2)
-5. Mettre en route le serveur apache (sudo systemctl start apache2)
-6. Vérifier si le serveur apache est bien activé (sudo systemctl status apache2)
-7. ouvrir depuis un poste la page web du serveur apache :
--> Trouver l'ip de notre serveur apache (ip a)
--> Entrer l'ip dans notre navigateur
-8. Créer depuis notre machine windows notre site web
-9. déplacer notre site web vers notre machine linux (utilisation de ssh)
+sudo shutdown -h now (permet d'éteindre immédiatement la machine)
+
+mkdir "nom du dossier" (permet la création d'un dossier sur notre machine)
+
+## Serveur Apache :
+
+Mettre à jour les paquets (sudo apt update && sudo apt upgrade)
+
+Installer le service Apache sur notre appareil (sudo apt install apache2 -y)
+
+Installer les modules php
+
+Configurer le serveur Apache (sudo systemctl enable apache2)
+
+Mettre en route le serveur Apache (sudo systemctl start apache2)
+
+Vérifier si le serveur Apache est bien activé (sudo systemctl status apache2)
+
+Ouvrir depuis un poste la page web du serveur Apache :
+-> Trouver l'IP de notre serveur Apache (ip a)
+-> Entrer l'IP dans notre navigateur
+
+Créer depuis notre machine Windows notre site web
+
+Déplacer notre site web vers notre machine Linux (utilisation de SSH)
+
+Depuis notre machine Windows, transférer le site web sur la machine Linux :
+-> Ouvrir le terminal
+-> Entrez la commande scp "chemin de notre site web" "nom de la machine Linux"@"IP de la machine Linux":~/"destination du fichier"
+-> Entrez "yes" et le mot de passe de la machine. Le site web sera transféré sur la VM
 
