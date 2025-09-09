@@ -10,3 +10,12 @@ Commande utile sous Linux :
 1. Mettre à jour les paquets (sudo apt update && sudo apt upgrade)
 2. Installer le service Apache sur notre appareil (sudo apt install apache2 -y)
 3. Installer les modules php
+4. Configurer le serveur apache (sudo systemctl enable apache2)
+5. Mettre en route le serveur apache (sudo systemctl start apache2)
+6. Vérifier si le serveur apache est bien activé (sudo systemctl status apache2)
+7. ouvrir depuis un poste la page web du serveur apache :
+-> Trouver l'ip de notre serveur apache (ip a)
+-> Entrer l'ip dans notre navigateur
+8. Créer depuis notre machine windows notre site web
+9. déplacer notre site web vers notre machine linux (utilisation de ssh)
+
