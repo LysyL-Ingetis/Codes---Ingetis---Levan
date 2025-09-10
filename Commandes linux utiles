@@ -1,0 +1,11 @@
+##Commande utile sous Linux :
+
+sudo apt search "nom du paquet" (permet de rechercher dans la liste des paquets le nom exact du paquet que nous voulons installer)
+
+man "nom du paquet" nous permet de visualiser toutes les commandes liées au paquet ciblé
+
+sudo shutdown -h now (permet d'éteindre immédiatement la machine)
+
+mkdir "nom du dossier" (permet la création d'un dossier sur notre machine)
+
+chmod -"" "nom du document" (permet de donner des permissions aux documents)
