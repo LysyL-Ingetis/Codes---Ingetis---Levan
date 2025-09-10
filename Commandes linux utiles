@@ -9,3 +9,7 @@ sudo shutdown -h now (permet d'éteindre immédiatement la machine)
 mkdir "nom du dossier" (permet la création d'un dossier sur notre machine)
 
 chmod -"" "nom du document" (permet de donner des permissions aux documents)
+
+su - (se connecter en root)
+
+sudo usermode -aG sudo "nom de l'utilisateur" (mettre l'utilsateur dans les sudoers. Reboot la machine)
