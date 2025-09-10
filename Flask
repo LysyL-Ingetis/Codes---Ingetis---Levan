@@ -6,3 +6,6 @@ Créer un environnement python3 (python3 -m venv "nom de l'environnement")
 
 Se rendre dans l'environnement (source "nom de l'environnement"/bin/activate)
 
+mettre à jour pip (pip install --upgrade pip)
+
+installer flask (pip install flask)
