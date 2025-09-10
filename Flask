@@ -1,0 +1,8 @@
+## Mise en place de Flask sous linux
+
+Installer python ainsi que pip et venv (sudo apt install python3 python3-pip python3-venv)
+
+Créer un environnement python3 (python3 -m venv "nom de l'environnement")
+
+Se rendre dans l'environnement (source "nom de l'environnement"/bin/activate)
+
