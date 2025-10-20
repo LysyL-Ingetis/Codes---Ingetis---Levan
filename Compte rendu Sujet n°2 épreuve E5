@@ -1,0 +1,61 @@
+Compte rendu Sujet N°2 épreuve E5. Activités 1, 3, 4
+#* 
+Activité 1 Mise en oeuvre DHCP et Squid avec plage d'adresse IP 
+
+Activité 3 Mise en oeuvre d'un serveur Web, un serveur AD et les équipements LoraWan 
+
+Activité 4 Mise en oeuvre de Vlan et d'un Pare Feux (déja fait l'année dernière mais refaisable)
+*#
+
+// Activité 3 traitée en premier 
+
+Ip de la Raspberry : 172.16.2.153, configurée statiquement a travers l'interface graphique en modifiant la connexion dans les paramètres wifi.
+
+Source de la mise en oeuvre : https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/ RandomNerdTutorials
+
+1) Mise à jour des paquets de base de l'os : $ sudo apt update && sudo apt upgrade /*'Cette commande permet de mettre à jour la raspberry, c'est léquivalent d'une mise à jour dans l'onglet Windows update d'un système windows.'
+
+2) Un serveur Web étant déja présent sur la raspberry, on vérifie simplement le status en utilisant $systemctl status apache2 :
+
+$ systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-10-20 09:45:24 CEST; 23min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 854 (apache2)
+      Tasks: 55 (limit: 4756)
+        CPU: 59ms
+     CGroup: /system.slice/apache2.service
+             ├─854 /usr/sbin/apache2 -k start
+             ├─855 /usr/sbin/apache2 -k start
+             └─856 /usr/sbin/apache2 -k start
+
+  On peut alors verifier la connexion avec un navigateur d'une autre machine en entrant http://172.16.2.153, la connexion fonctionne et affiche la page html contenue dans : /var/www/html/index.html 
+
+  //pour comprendre comment paramètrer un serveur web, voir le site ci dessus.
+
+3) installation de php sur la raspberry
+
+$ sudo apt install php /* additionellement, utiliser l'argument -y pour répondre yes par défaut a toutes les questions potentiellement posées
+
+  maintenant on remplace le fichier /var/www/html/index.html par un fichier php 
+
+/var/www/html $ sudo rm index.html
+
+  ensuite on créer un fichier php : 
+
+/var/www/html $ sudo nano index.php
+
+  dans le fichier on écrit : <?php echo "le fichier ci présent est un fichier php pour le serveur web 172.16.2.154\n"; ?>, on enregiste, en utilisant ctrl + x, O, entrée
+  on rédemarre le service Apache2 pour enregistrer nos modifications, et on ré accède au serveur a travers un navigateur. 
+  la page affiche : le fichier ci présent est un fichier php pour le serveur web 172.16.2.154
+  C'est bon
+
+On peut désormais supprimer le fichier php 
+
+/var/www/html $ sudo rm index.php 
+
+4) Installation de MYsql et du serveur MariaDB 
+
+/var/www/html $ sudo apt install mariadb-server php-mysql
+/var/www/html $ sudo service apache2 restart
