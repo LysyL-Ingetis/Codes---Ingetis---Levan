@@ -40,11 +40,11 @@ $ sudo apt install php /* additionellement, utiliser l'argument -y pour répondr
 
   maintenant on remplace le fichier /var/www/html/index.html par un fichier php 
 
-/var/www/html $ sudo rm index.html
+ $ sudo rm index.html
 
   ensuite on créer un fichier php : 
 
-/var/www/html $ sudo nano index.php
+ $ sudo nano index.php
 
   dans le fichier on écrit : <?php echo "le fichier ci présent est un fichier php pour le serveur web 172.16.2.154\n"; ?>, on enregiste, en utilisant ctrl + x, O, entrée
   on rédemarre le service Apache2 pour enregistrer nos modifications, et on ré accède au serveur a travers un navigateur. 
@@ -53,9 +53,27 @@ $ sudo apt install php /* additionellement, utiliser l'argument -y pour répondr
 
 On peut désormais supprimer le fichier php 
 
-/var/www/html $ sudo rm index.php 
+ $ sudo rm index.php 
 
 4) Installation de MYsql et du serveur MariaDB 
 
-/var/www/html $ sudo apt install mariadb-server php-mysql
-/var/www/html $ sudo service apache2 restart
+ $ sudo apt install mariadb-server php-mysql
+ $ sudo service apache2 restart /* redémarrage de apache2 pour appliquer le nouveau module qu'on a installer 
+
+     optionellement, sécurisation minimale de mysql en utilisant ce script, répondre aux question posés (en gros Yes a tout)
+
+ $ sudo mysql_secure_installation
+
+     créer un nouvel utilisateur pour mieux utiliser myphpadmin
+
+ $ sudo mysql --user=root --password
+> create user admin@localhost identified by 'your_password';
+> grant all privileges on *.* to admin@localhost;
+> FLUSH PRIVILEGES;
+> exit;
+
+5) installation de myphpadmin 
+
+ $ sudo apt install phpmyadmin -y
+
+, Répondre aux question des prompts, choisi Apache 2 quand c'est demander, entrer le mot de passe et répondre ok.
